@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <img src="dekub100.png" alt="Logo" width="300" height="75">
+        <img src="logo.png" alt="Logo" width="300" height="75">
         <div id="indexlink">
-            <a href="indexpolski.html">Polska Wersja Strony</a>
+            <a href="indexpolski.html">Polska Werjsa Strony</a>
         </div>
     </header>
     
@@ -26,7 +26,7 @@
                     Country: Poland
                 </p>
                 <p>
-                    I'm a 16 year old that mainly plays Osu! and Rainbow Six Siege competitively.
+                    Hey, i'm dekub. I'm a dude that mainly plays Osu! and Rainbow Six Siege competitively.
                 </p>
                 <p>
                     I usually do content in Polish but might try doing some English content in the future.
@@ -83,9 +83,9 @@
                     <span class="highlight">Resolution</span> - 1920x1080<br>
                     <span class="highlight">Aspect Ratio</span> - 3:2<br>
                     <span class="highlight">FOV</span> - 87<br>
-                    <span class="highlight">Mouse Sensitivity:</span><br>
-                    <span class="highlight">Vertical</span> - 35<br>
-                    <span class="highlight">Horizontal</span> - 43<br>
+                    <span class="highlight">Mouse Sensitivity</span> - 1200DPI<br>
+                    <span class="highlight">In Game Vertical</span> - 35<br>
+                    <span class="highlight">In Game Horizontal</span> - 43<br>
                     <span class="highlight">Sensitivity Multiplier</span> - 0.002230<br>
                     <span class="highlight">1x Scope Sensitivity</span> - 21<br>
                     <span class="highlight">2.5x (ACOG) Scope Sensitivity</span> - 36
@@ -107,45 +107,6 @@
         -->
     </div>
 
-
-    <script>
-        document.querySelector('.discord').addEventListener('click', function() {
-            var textArea = document.createElement('textarea');
-            textArea.value = this.getAttribute('data-clipboard-text');
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            var notification = this.parentNode.querySelector('.copy-notification');
-            notification.style.display = 'block';
-            // Reset animation properties before applying them again
-            notification.style.animation = 'none';
-            notification.offsetHeight; /* trigger reflow */
-            notification.style.animation = null; 
-            setTimeout(function() {
-            notification.style.animation = 'fadeOut 0.25s ease-out'; // Apply fade-out animation
-                setTimeout(function() {
-                    notification.style.display = 'none'; // Hide notification after animation completes
-                }, 250); // Fade out duration: 250ms
-            }, 2000); // Hide notification after 2 seconds
-        });
-
-
-        document.querySelector('.discord').addEventListener('mouseenter', function() {
-            var tooltip = this.parentNode.querySelector('.tooltip');
-            tooltip.style.display = 'block';
-        });
-
-        document.querySelector('.discord').addEventListener('mouseleave', function() {
-            var tooltip = this.parentNode.querySelector('.tooltip');
-            tooltip.style.display = 'none';
-        });
-
-        document.querySelector('.discord').addEventListener('click', function() {
-            var tooltip = this.parentNode.querySelector('.tooltip');
-            tooltip.style.display = 'none';
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

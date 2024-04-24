@@ -2,34 +2,20 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2b2b2b; /* Darker background */
-    color: #e0e0e0; /* Lighter text */
+    background-color: #2b2b2b; 
+    color: #e0e0e0; 
 }
 
 header {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     background-color: rgb(190, 150, 39); 
-    color: #fff; /* White text */
-    padding: 10px 0; /* Increased vertical padding */
-    text-align: center; /* Center align text */
-    display: flex; /* Use flexbox */
-    align-items: center; /* Align items vertically */
-    justify-content: center; /* Center align items horizontally */
+    color: #fff; 
+    padding: 10px 0; 
+    text-align: center;  
+    align-items: center; 
+    justify-content: center; 
 }
-
-p2 {
-    color: rgb(176, 176, 255);
-}
-
-p3{
-    color: #ff9393;
-}
-
-p4{
-    color: #ff66aa;
-}
-
 
 nav ul {
     list-style-type: none;
@@ -41,53 +27,57 @@ nav ul li {
     margin-right: 20px;
 }
 
-/* Target links specifically in the "games" section */
+
+
 #games a {
     text-decoration: underline;
-}
-
-#games a:hover {
-    text-decoration: underline; /* Underline links in "games" section on hover */
 }
 
 #osulink a {
     color: #ff66aa;
 }
 
-#osulink a:visited {
-    color: #ff66aa;
+#osulink a:hover {
+    color: #ffa0cb;
 }
 
 #r6link a {
     color: #c9c9c9;
 }
 
-#r6link a:visited {
-    color: #c9c9c9;
+#r6link a:hover {
+    color: #e7e7e7;
 }
 
+.highlight {
+    color: #ff6600;
+    font-weight: bold; 
+}
+
+
+
 #social-media a {
-    color: #64b5f6; /* Light blue for social media links */
+    color: #64b5f6; 
     text-decoration: underline;
-    display: flex; /* Align image and text horizontally */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 10px; /* Added margin between social media links */
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 30px; /* Add space for the social media icon */
-    background-size: 20px 20px; /* Set the size of the background image */
+    padding-left: 30px; 
+    background-size: 20px 20px; 
 }
 
 #social-media a:hover {
-    color: #bbdefb; /* Light blue on hover for social media links */
+    color: #bbdefb; 
 }
 
 #social-media .discord {
-    color: #64b5f6; /* Light blue for Discord username */
-    cursor: pointer; /* Remove cursor pointer */
-    padding-left: 30px; /* Add space for the Discord icon */
-    display: flex; /* Align image and text horizontally */
-    align-items: center; /* Center items vertically */
+    color: #64b5f6; 
+    cursor: pointer; 
+    padding-left: 30px; 
+    display: flex; 
+    align-items: center; 
 }
 
 #social-media .discord:hover {
@@ -106,29 +96,19 @@ nav ul li {
 }
 
 .youtube {
-    background-image: url('youtube-icon.png'); /* URL to your YouTube icon image */
+    background-image: url('youtube-icon.png'); 
 }
 
 .twitch {
-    background-image: url('twitch-icon.png'); /* URL to your Twitch icon image */
+    background-image: url('twitch-icon.png'); 
 }
 
 .discord {
-    background-image: url('discord-icon.png'); /* URL to your Discord icon image */
+    background-image: url('discord-icon.png'); 
 }
 
 
-.copy-notification {
-    position: absolute;
-    left: 49%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    display: none; /* Initially hidden */
-}
+
 
 .tooltip {
     position: absolute;
@@ -140,6 +120,37 @@ nav ul li {
     border-radius: 5px;
     font-size: 14px;
     display: none; /* Initially hidden */
+    animation: fadeIn 0.25s ease-in; 
+}
+
+.copy-notification {
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; /* Fade in */
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; /* Fade out */
+    }
 }
 
 
@@ -152,7 +163,7 @@ nav ul li {
 }
 
 .section-box {
-    background-color: #3b3b3b; /* Dark gray */
+    background-color: #3b3b3b; 
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 15px; /* Added margin between boxes */
@@ -160,7 +171,7 @@ nav ul li {
 }
 
 .indented {
-    margin-left: 15px; /* Adjust the indentation as needed */
+    margin-left: 15px; 
 }
 
 /* Center larger text */
@@ -173,4 +184,18 @@ nav ul li {
     .section-box {
         flex-basis: calc(100% - 30px); /* Each box takes 100% width minus margins */
     }
+}
+
+
+
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Add padding top and bottom */
+}
+
+#indexlink a{
+    color: #fff;
+    text-decoration: underline;
 }

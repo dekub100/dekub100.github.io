@@ -18,6 +18,18 @@ header {
     justify-content: center; /* Center align items horizontally */
 }
 
+p2 {
+    color: rgb(176, 176, 255);
+}
+
+p3{
+    color: #ff9393;
+}
+
+p4{
+    color: #ff66aa;
+}
+
 
 nav ul {
     list-style-type: none;

@@ -115,7 +115,7 @@ nav ul li {
 
 
 .tooltip {
-    position: absolute;
+    position: relative;
     left: 49%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
@@ -128,7 +128,7 @@ nav ul li {
 }
 
 .copy-notification {
-    position: absolute;
+    position: relative;
     left: 49%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
@@ -163,15 +163,31 @@ nav ul li {
     flex-wrap: wrap; /* Allow sections to wrap to the next line */
     justify-content: space-around;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1500px;
 }
 
 .section-box {
-    background-color: #3b3b3b; 
-    padding: 20px;
+    background-color: #3b3b3b;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex-basis: calc(25% - 40px);
+}
+
+.section-pc{
+    background-color: #3b3b3b;
+    padding: 10px;
     border-radius: 10px;
-    margin-bottom: 15px; /* Added margin between boxes */
-    flex-basis: calc(50% - 30px); /* Each box takes 50% width minus margins */
+    flex-basis: calc(50% - 40px);
+    margin-bottom: 10px;
+}
+
+.section-twitch{
+    background-color: #3b3b3b;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: max-content;
 }
 
 .indented {
@@ -179,13 +195,15 @@ nav ul li {
 }
 
 /* Center larger text */
-.section-box h2 {
+.section-box h2,
+.section-pc h2 {
     text-align: center;
 }
 
 /* Adjust width for smaller screens */
 @media (max-width: 600px) {
-    .section-box {
+    .section-box,
+    .section-pc {
         flex-basis: calc(100% - 30px); /* Each box takes 100% width minus margins */
     }
 }

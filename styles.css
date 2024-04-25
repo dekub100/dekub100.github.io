@@ -102,41 +102,42 @@ nav ul li {
 .youtube {
     background-image: url('youtube-icon.png'); 
 }
-
 .twitch {
     background-image: url('twitch-icon.png'); 
 }
-
 .discord {
     background-image: url('discord-icon.png'); 
 }
-
+.tiktok {
+    background-image: url('tiktok-icon.png');
+}
 
 
 
 .tooltip {
     position: relative;
-    left: 49%;
-    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    padding: 5px 10px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
     display: none; /* Initially hidden */
     animation: fadeIn 0.25s ease-in; 
+    margin-top: -5px;
+    margin-bottom: 5px;
+    width: fit-content;
 }
 
 .copy-notification {
     position: relative;
-    left: 49%;
-    transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    padding: 5px 10px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 14px;
     display: none; 
+    margin-top: -5px;
+    width: fit-content;
 }
 
 @keyframes fadeIn {
@@ -169,7 +170,7 @@ nav ul li {
 .section-box {
     background-color: #3b3b3b;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 10px;
     flex-basis: calc(25% - 40px);
 }
@@ -182,12 +183,11 @@ nav ul li {
     margin-bottom: 10px;
 }
 
-.section-twitch{
-    background-color: #3b3b3b;
+.section-twitch {
+    background-color: #1b1b1b;
     padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: max-content;
+    border-radius: 20px;
+    flex-basis: calc(50% - 20px);
 }
 
 .indented {

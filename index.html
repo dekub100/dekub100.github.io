@@ -10,14 +10,28 @@
 </head>
 <body>
     <header>
-        <a href="index.html">
+        <a href="index">
             <img src="logo.png" alt="Logo" width="300" height="75">
         </a>
-        <div id="indexlink">
-            <a href="indexpolski.html">Polska Werjsa Strony</a>
-        </div>
     </header>
+
+    <div class="mobile-nav-button" onclick="toggleMobileNav()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
     
+
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="polska"><span class="polska">Polska Strona</span></a></li>
+        </ul>
+        <text>
+            might or might not add other things later
+        </text>
+    </nav>
+
+
     <div class="container">
 
         <section id="about" class="section-box">
@@ -59,7 +73,7 @@
                         <a href="https://www.youtube.com/@dekub100" target="_blank" class="social-media-link youtube">Youtube</a>
                         <a href="https://www.twitch.tv/dekubstreamingservice" target="_blank" class="social-media-link twitch">Twitch</a>
                         <a href="https://www.tiktok.com/dekub100" target="_blank" class="social-media-link tiktok">TikTok</a>
-                        <a class="social-media-link discord">dekub100</a>
+                        <a class="social-media-link discord" data-clipboard-text="dekub100">dekub100</a>
                         <div class="copy-notification" style="display: none;">Discord username copied!</div>
                         <div class="tooltip" style="display: none;">Click to copy Discord username</div>
                         if not linked here: @dekub100 on everything

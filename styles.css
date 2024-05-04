@@ -73,7 +73,9 @@ nav ul li {
 }
 
 #social-media a:hover {
-    color: #bbdefb; 
+    color: #bbdefb;
+    transition: transform 0.08s;
+    transform: scale(1.05);
 }
 
 #social-media .discord {
@@ -200,10 +202,119 @@ nav ul li {
     text-align: center;
 }
 
-/* Adjust width for smaller screens */
-@media (max-width: 600px) {
+.mobile-nav-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav text {
+    color: #8d8d8d;
+}
+
+.mobile-nav-button div {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    transition: opacity 0.3s;
+}
+
+.mobile-nav-button.open div.bar1,
+.mobile-nav-button.open div.bar2,
+.mobile-nav-button.open div.bar3 {
+    opacity: 0;
+}
+
+.mobile-nav-button.open::after {
+    content: "X";
+    color: #dfdfdf;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #3a3a3a;
+    transition: transform 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-100%);
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile-nav ul li {
+    border-bottom: 1px solid #ccc;
+}
+
+.mobile-nav ul li a:hover {
+    transition: transform 0.08s;
+    transform: scale(1.05);
+}
+
+.mobile-nav ul li a {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    top: 100px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.polska {
+    background-image: linear-gradient(to bottom, white 60%, red 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.english {
+    background-image: url(uk-small.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.mobile-nav.mobile-nav-open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+@media (max-width: 768px) {
     .section-box,
     .section-pc {
         flex-basis: calc(100% - 30px); /* Each box takes 100% width minus margins */
     }
+    header img{
+        width: 200px;
+        height: 50px;
+    }
 }
+

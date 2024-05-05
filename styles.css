@@ -11,14 +11,7 @@ header {
     color: #fff; 
     padding: 10px 0; 
     text-align: center;  
-    align-items: center; 
-    justify-content: center; 
-}
-
-#indexlink a{
-    color: #fff;
-    text-decoration: underline;
-    font-style: italic;
+    align-items: center;
 }
 
 nav ul {
@@ -203,6 +196,26 @@ nav ul li {
 }
 
 .mobile-nav-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    margin: 5px;
+}
+
+.mobile-nav-button.open {
+    display: none;
+}
+
+.in-mobile-nav-button {
     position: fixed;
     top: 15px;
     left: 15px;
@@ -216,6 +229,13 @@ nav ul li {
     align-items: center;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    margin: 5px;
+}
+
+.in-mobile-nav-button div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(190, 150, 39);
 }
 
 .mobile-nav text {
@@ -226,24 +246,6 @@ nav ul li {
     width: 35px;
     height: 5px;
     background-color: #333;
-    transition: opacity 0.3s;
-}
-
-.mobile-nav-button.open div.bar1,
-.mobile-nav-button.open div.bar2,
-.mobile-nav-button.open div.bar3 {
-    opacity: 0;
-}
-
-.mobile-nav-button.open::after {
-    content: "X";
-    color: #dfdfdf;
-    font-size: 35px;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .mobile-nav {
@@ -263,6 +265,7 @@ nav ul li {
 }
 
 .mobile-nav ul {
+    top: 50px;
     list-style-type: none;
     padding: 0;
 }

@@ -14,6 +14,11 @@ header {
     align-items: center;
 }
 
+header img:hover {
+    transition: transform 0.08s;
+    transform: scale(1.05);
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -212,6 +217,7 @@ nav ul li {
 }
 
 .mobile-nav-button.open {
+    transition: all 0.3s;
     display: none;
 }
 
@@ -238,10 +244,6 @@ nav ul li {
     background-color: rgb(190, 150, 39);
 }
 
-.mobile-nav text {
-    color: #8d8d8d;
-}
-
 .mobile-nav-button div {
     width: 35px;
     height: 5px;
@@ -255,13 +257,17 @@ nav ul li {
     width: 17%;
     height: 100vh;
     background-color: #3a3a3a;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     z-index: 999;
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: translateX(-100%);
     text-wrap: wrap;
+}
+
+.mobile-nav text {
+    color: #8d8d8d;
 }
 
 .mobile-nav ul {
@@ -271,7 +277,7 @@ nav ul li {
 }
 
 .mobile-nav ul li {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px;
 }
 
 .mobile-nav ul li a:hover {
@@ -308,8 +314,6 @@ nav ul li {
     transform: translateX(0);
 }
 
-
-
 @media (max-width: 768px) {
     .section-box,
     .section-pc {
@@ -326,7 +330,7 @@ nav ul li {
         width: 100%;
         height: 100vh;
         background-color: #3a3a3a;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease;
         z-index: 999;
         display: flex;
         flex-direction: column;

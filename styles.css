@@ -2,15 +2,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2b2b2b; 
-    color: #e0e0e0; 
+    background-color: #1e1e2f; /* Darker background for better contrast */
+    color: #f5f5f5; /* Slightly brighter text color */
 }
 
 header {
-    background-color: rgb(190, 150, 39); 
-    color: #fff; 
-    padding: 10px 0; 
-    text-align: center;  
+    background-color: #3f51b5; /* Calmer blue shade */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
     align-items: center;
 }
 
@@ -29,45 +29,41 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav ul li a {
+    color: #bbdefb; /* Calmer color for nav links */
+}
 
-
-#games a {
+nav ul li a:hover {
+    color: #e3f2fd; /* Lighter color on hover */
     text-decoration: underline;
 }
 
-#osulink a {
-    color: #ff66aa;
+#games a {
+    color: #64b5f6;
+    text-decoration: underline;
+    display: block;
 }
 
-#osulink a:hover {
-    color: #ffa0cb;
-}
-
-#r6link a {
-    color: #c9c9c9;
-}
-
-#r6link a:hover {
-    color: #e7e7e7;
+#games a:hover {
+    transition: transform 0.08s;
+    transform: scale(1.05);
 }
 
 .highlight {
-    color: #ff6600;
-    font-weight: bold; 
+    color: #ff9800;
+    font-weight: bold;
 }
 
-
-
 #social-media a {
-    color: #64b5f6; 
+    color: #64b5f6;
     text-decoration: underline;
-    display: flex; 
-    align-items: center; 
-    margin-bottom: 10px; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 30px; 
-    background-size: 20px 20px; 
+    padding-left: 30px;
+    background-size: 20px 20px;
 }
 
 #social-media a:hover {
@@ -77,15 +73,14 @@ nav ul li {
 }
 
 #social-media .discord {
-    color: #64b5f6; 
-    cursor: pointer; 
-    padding-left: 30px; 
-    display: flex; 
-    align-items: center; 
+    color: #64b5f6;
+    cursor: pointer;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
 }
 
 #social-media .discord:hover {
-    cursor: pointer;
     color: #bbdefb;
 }
 
@@ -94,25 +89,26 @@ nav ul li {
     background-position: left center;
 }
 
-.social-media-link img{
+.social-media-link img {
     width: 20px;
-    width: 20px;
+    height: 20px;
 }
 
 .youtube {
-    background-image: url('youtube-icon.png'); 
+    background-image: url('youtube-icon.png');
 }
+
 .twitch {
-    background-image: url('twitch-icon.png'); 
+    background-image: url('twitch-icon.png');
 }
+
 .discord {
-    background-image: url('discord-icon.png'); 
+    background-image: url('discord-icon.png');
 }
+
 .tiktok {
     background-image: url('tiktok-icon.png');
 }
-
-
 
 .tooltip {
     position: relative;
@@ -122,7 +118,7 @@ nav ul li {
     border-radius: 5px;
     font-size: 14px;
     display: none; /* Initially hidden */
-    animation: fadeIn 0.25s ease-in; 
+    animation: fadeIn 0.25s ease-in;
     margin-top: -5px;
     margin-bottom: 5px;
     width: fit-content;
@@ -135,14 +131,14 @@ nav ul li {
     padding: 5px;
     border-radius: 5px;
     font-size: 14px;
-    display: none; 
+    display: none;
     margin-top: -5px;
     width: fit-content;
 }
 
 @keyframes fadeIn {
     0% {
-        opacity: 0; 
+        opacity: 0;
     }
     100% {
         opacity: 1; /* Fade in */
@@ -151,13 +147,12 @@ nav ul li {
 
 @keyframes fadeOut {
     0% {
-        opacity: 1; 
+        opacity: 1;
     }
     100% {
         opacity: 0; /* Fade out */
     }
 }
-
 
 .container {
     display: flex;
@@ -168,15 +163,23 @@ nav ul li {
 }
 
 .section-box {
-    background-color: #3b3b3b;
+    background-color: #2e3b4e; /* Softer background color for sections */
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    flex-basis: calc(25% - 40px);
+    flex-basis: calc(50% - 40px);
 }
 
-.section-pc{
-    background-color: #3b3b3b;
+.section-games {
+    background-color: #2e3b4e; /* Softer background color for sections */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    flex-basis: calc(50% - 40px);
+}
+
+.section-pc {
+    background-color: #2e3b4e; /* Matching section color */
     padding: 10px;
     border-radius: 10px;
     flex-basis: calc(50% - 40px);
@@ -184,14 +187,14 @@ nav ul li {
 }
 
 .section-twitch {
-    background-color: #1b1b1b;
+    background-color: #1e2a38; /* Different background color for contrast */
     padding: 10px;
     border-radius: 20px;
     flex-basis: calc(100% - 40px);
 }
 
 .indented {
-    margin-left: 15px; 
+    margin-left: 15px;
 }
 
 /* Center larger text */
@@ -241,7 +244,7 @@ nav ul li {
 .in-mobile-nav-button div {
     width: 35px;
     height: 5px;
-    background-color: rgb(190, 150, 39);
+    background-color: #ff9800;
 }
 
 .mobile-nav-button div {
@@ -296,20 +299,6 @@ nav ul li {
     color: #fff;
 }
 
-.polska {
-    background-image: linear-gradient(to bottom, white 60%, red 40%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.english {
-    background-image: url(uk-small.png);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
 .mobile-nav.mobile-nav-open {
     opacity: 1;
     transform: translateX(0);
@@ -320,11 +309,11 @@ nav ul li {
     .section-pc {
         flex-basis: calc(100% - 30px); /* Each box takes 100% width minus margins */
     }
-    header img{
+    header img {
         width: 200px;
         height: 50px;
     }
-    .mobile-nav{
+    .mobile-nav {
         position: fixed;
         top: 0;
         left: 0;
@@ -339,4 +328,3 @@ nav ul li {
         transform: translateY(-100%);
     }
 }
-

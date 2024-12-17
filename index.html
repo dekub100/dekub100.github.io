@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dekub</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <a href="https://dekub100.github.io">
-            <img src="logo.png" alt="Logo" width="300" height="75">
+            <img src="logo.webp" alt="Logo" width="300" height="75">
         </a>
         <div class="mobile-nav-button" onclick="toggleMobileNav()">
             <div class="bar1"></div>
@@ -27,42 +31,72 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <br><br>
+        <br><br><br><br>
         <ul>
-            <li><a href="https://dekub100.github.io/games">Gry</span></a></li>
+            <li><div class="bigger-text">Under Construction</div></li>
+            <img src="construction.webp">
         </ul>
     </div>
 
     <div class="container">
 
         <section id="about" class="section-box">
-            <h2>About Me</h2>
+            <div class="bigger-text">O Mnie</div>
             <div class="indented">
                 <p>
                     Wiek: 16<br>
-                    Skąd jestem: Polska oczywiście
-                </p>
-                <p>
-                    Siema jestem Jakub (dekub). Ogólnie gram głownie w Geoguessr, Rainbow Six: Siege i Osu!
+                    Imię: Jakub
                 </p>
             </div>
         </section>
 
         <section id="social-media" class="section-box">
-            <h2>Social Media</h2>
+            <div class="bigger-text">Social Media</div>
             <div class="indented">
                 <ul>
                         <a href="https://www.youtube.com/@dekub100" target="_blank" class="social-media-link youtube">Youtube</a>
                         <a href="https://www.twitch.tv/dekubstreamingservice" target="_blank" class="social-media-link twitch">Twitch</a>
                         <a href="https://www.tiktok.com/dekub100" target="_blank" class="social-media-link tiktok">TikTok</a>
-                        <a class="social-media-link discord" data-clipboard-text="dekub100">dekub100</a>
+                        <a class="social-media-link discord" data-clipboard-text="dekub100">dekub100<div id="mobileOnlyText">(Click to copy)</div></a>
                         <div class="copy-notification" style="display: none;">Discord username copied!</div>
                         <div class="tooltip" style="display: none;">Click to copy Discord username</div>
-                        if not linked here: @dekub100 on everything
+                        jeżeli nie zalinkowane tutaj: @dekub100 na wszystkim
                 </ul>
             </div>
         </section>
 
+        <section id="specs" class="section-box">
+            <div class="bigger-text">Specyfikacja Komputera</div>
+            <div id="indented">
+                <p>
+                    <span class="highlight">Procesor</span> - Ryzen 5 5600<br>
+                    <span class="highlight">Karta Graficzna</span> - Asus Dual GTX 1070 OC<br>
+                    <span class="highlight">RAM</span> - G.Skill Aegis 32GB 2x16GB 3000MHz<br>
+                    <span class="highlight">Monitor</span> - Koorui 24E6C 165Hz<br>
+                    <span class="highlight">Myszka</span> - Logitech G Pro Wireless<br>
+                    <span class="highlight">Klawiatura</span> - Drunkdeer G75<br>
+                    <span class="highlight">Słuchawki</span> - Simgot MAZE EW200 (z Peace EQ)<br>
+                    <span class="highlight">Mikrofon</span> - Fifine K670<br>
+                    <span class="highlight">Kamerka</span> - Aukey LM1E
+                </p>
+        </section>
+
+        <section id="r6" class="section-box">
+            <div class="bigger-text">Ustaiwenia R6S</div>
+            <div id="indented">
+                <p>
+                    <span class="highlight">Resolution</span> - 1920x1080<br>
+                    <span class="highlight">Aspect Ratio</span> - 3:2<br>
+                    <span class="highlight">FOV</span> - 87<br>
+                    <span class="highlight">Mouse Sensitivity</span> - 1200DPI<br>
+                    <span class="highlight">In Game Vertical</span> - 35<br>
+                    <span class="highlight">In Game Horizontal</span> - 43<br>
+                    <span class="highlight">Sensitivity Multiplier</span> - 0.002230<br>
+                    <span class="highlight">1x Scope Sensitivity</span> - 21<br>
+                    <span class="highlight">2.5x (ACOG) Scope Sensitivity</span> - 36
+                </p>
+            </div>
+        </section>
 
         <div class="section-twitch">
                 <iframe src="https://player.twitch.tv/?channel=dekubstreamingservice&parent=dekub.eu" frameborder="0" allowfullscreen="true" scrolling="no" width="100%" height="600"></iframe>

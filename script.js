@@ -4,8 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const notification = discordButton.parentNode.querySelector('.copy-notification');
     const textToCopy = 'dekub100'; // Change this to the text you want to copy
 
-    discordButton.addEventListener('click', function() {
-        copyToClipboard(textToCopy);
+    discordButton.addEventListener('click', async function() {
+        try {
+            await navigator.clipboard.writeText(textToCopy);
+            console.log('Text copied to clipboard');
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
         showNotification(notification);
         hideTooltip(tooltip);
     });
@@ -17,24 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     discordButton.addEventListener('mouseleave', function() {
         hideTooltip(tooltip);
     });
-
-    function copyToClipboard(text) {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed'; // Prevent scrolling to the bottom of the page in MS Edge.
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-
-        try {
-            document.execCommand('copy');
-            console.log('Text copied to clipboard');
-        } catch (err) {
-            console.error('Failed to copy text: ', err);
-        }
-
-        document.body.removeChild(textArea);
-    }
 
     function showNotification(notification) {
         notification.style.display = 'block';

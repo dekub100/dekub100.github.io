@@ -1,5 +1,18 @@
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Ubuntu";
     margin: 0;
     padding: 0;
     background-color: #1e1e2f; /* Darker background for better contrast */
@@ -30,11 +43,11 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #bbdefb; /* Calmer color for nav links */
+    color: #bbdefb;
 }
 
 nav ul li a:hover {
-    color: #e3f2fd; /* Lighter color on hover */
+    color: #e3f2fd;
     text-decoration: underline;
 }
 
@@ -57,13 +70,14 @@ nav ul li a:hover {
 #social-media a {
     color: #64b5f6;
     text-decoration: underline;
-    display: flex;
+    display: block; 
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 30px;
     background-size: 20px 20px;
+    width: fit-content;
 }
 
 #social-media a:hover {
@@ -76,8 +90,7 @@ nav ul li a:hover {
     color: #64b5f6;
     cursor: pointer;
     padding-left: 30px;
-    display: flex;
-    align-items: center;
+    display: block;
 }
 
 #social-media .discord:hover {
@@ -95,62 +108,64 @@ nav ul li a:hover {
 }
 
 .youtube {
-    background-image: url('youtube-icon.png');
+    background-image: url('youtube-icon.webp');
 }
 
 .twitch {
-    background-image: url('twitch-icon.png');
+    background-image: url('twitch-icon.webp');
 }
 
 .discord {
-    background-image: url('discord-icon.png');
+    background-image: url('discord-icon.webp');
 }
 
 .tiktok {
-    background-image: url('tiktok-icon.png');
+    background-image: url('tiktok-icon.webp');
 }
 
 .tooltip {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    display: none; /* Initially hidden */
-    animation: fadeIn 0.25s ease-in;
-    margin-top: -5px;
-    margin-bottom: 5px;
-    width: fit-content;
-}
-
-.copy-notification {
-    position: relative;
+    position: absolute;
+    top: 283px;
+    right: 800px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     font-size: 14px;
     display: none;
-    margin-top: -5px;
+    animation: fadeIn 0.25s ease-in;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.copy-notification {
+    position: absolute;
+    top: 283px;
+    right: 833px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
     width: fit-content;
 }
 
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
     }
-    100% {
-        opacity: 1; /* Fade in */
+    to {
+        opacity: 1;
     }
 }
 
 @keyframes fadeOut {
-    0% {
+    from {
         opacity: 1;
     }
-    100% {
-        opacity: 0; /* Fade out */
+    to {
+        opacity: 0;
     }
 }
 
@@ -170,22 +185,6 @@ nav ul li a:hover {
     flex-basis: calc(50% - 40px);
 }
 
-.section-games {
-    background-color: #2e3b4e; /* Softer background color for sections */
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    flex-basis: calc(50% - 40px);
-}
-
-.section-pc {
-    background-color: #2e3b4e; /* Matching section color */
-    padding: 10px;
-    border-radius: 10px;
-    flex-basis: calc(50% - 40px);
-    margin-bottom: 10px;
-}
-
 .section-twitch {
     background-color: #1e2a38; /* Different background color for contrast */
     padding: 10px;
@@ -197,10 +196,11 @@ nav ul li a:hover {
     margin-left: 15px;
 }
 
-/* Center larger text */
-.section-box h2,
-.section-pc h2 {
+.bigger-text {
     text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .mobile-nav-button {
@@ -265,6 +265,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     transform: translateX(-100%);
     text-wrap: wrap;
 }
@@ -326,5 +327,11 @@ nav ul li a:hover {
         flex-direction: column;
         align-items: center;
         transform: translateY(-100%);
+    }
+}
+
+@media (min-width: 769px) {
+    #mobileOnlyText {
+        display: none;
     }
 }

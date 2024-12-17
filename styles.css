@@ -10,6 +10,11 @@
     font-style: normal;
   }
   
+  .ubuntu-regular-italic {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
 
 body {
     font-family: "Ubuntu";
@@ -67,6 +72,10 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+#social-media {
+    font-size: 17px;
+}
+
 #social-media a {
     color: #64b5f6;
     text-decoration: underline;
@@ -78,23 +87,13 @@ nav ul li a:hover {
     padding-left: 30px;
     background-size: 20px 20px;
     width: fit-content;
+    cursor: pointer;
 }
 
 #social-media a:hover {
     color: #bbdefb;
     transition: transform 0.08s;
     transform: scale(1.05);
-}
-
-#social-media .discord {
-    color: #64b5f6;
-    cursor: pointer;
-    padding-left: 30px;
-    display: block;
-}
-
-#social-media .discord:hover {
-    color: #bbdefb;
 }
 
 .social-media-link {
@@ -115,7 +114,7 @@ nav ul li a:hover {
     background-image: url('twitch-icon.webp');
 }
 
-.discord {
+.discord{
     background-image: url('discord-icon.webp');
 }
 
@@ -125,8 +124,8 @@ nav ul li a:hover {
 
 .tooltip {
     position: absolute;
-    top: 283px;
-    right: 800px;
+    top: 275px;
+    right: 830px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 5px;
@@ -140,8 +139,8 @@ nav ul li a:hover {
 
 .copy-notification {
     position: absolute;
-    top: 283px;
-    right: 833px;
+    top: 275px;
+    right: 863px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 5px;
@@ -185,14 +184,26 @@ nav ul li a:hover {
     flex-basis: calc(50% - 40px);
 }
 
-.section-twitch {
+#section-twitch {
     background-color: #1e2a38; /* Different background color for contrast */
     padding: 10px;
     border-radius: 20px;
     flex-basis: calc(100% - 40px);
 }
 
-.indented {
+#media-other {
+    font-style: italic;
+}
+
+#about {
+    font-size: 45px;
+}
+
+#specs, #siege {
+    font-size: 20px;
+}
+
+.smaller-text {
     margin-left: 15px;
 }
 
@@ -219,7 +230,7 @@ nav ul li a:hover {
     margin: 5px;
 }
 
-.mobile-nav-button.open {
+.mobile-nav-button-open {
     transition: all 0.3s;
     display: none;
 }

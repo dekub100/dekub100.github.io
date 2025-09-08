@@ -6,7 +6,7 @@ body {
   font-family: "Roboto", "Segoe UI", Arial, sans-serif;
   background: #000000;
 }
-/* CSS PS2-style intro */
+
 #loading-screen {
   position: fixed;
   top: 0;
@@ -90,6 +90,7 @@ body {
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
 }
+
 /* Platform-specific link colors */
 .ps2-item a[href*="youtube.com"] {
   color: #ff0000;
@@ -133,13 +134,11 @@ body {
   border-radius: 50%;
 }
 
-/* Mobile styles */
 @media (max-width: 700px) {
   body {
     font-size: 1rem;
     overflow-x: hidden;
   }
-  /* Ensure video is behind the menu on mobile */
   #dots-video {
     z-index: 0;
     position: absolute;
@@ -190,5 +189,16 @@ body {
     width: 28px;
     height: 28px;
   }
-  /* Removed unused #intro-video styles */
+  .ps2-item a {
+    width: fit-content;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+  }
 }

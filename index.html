@@ -1,106 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dekub</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.webp" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
-</head>
-<body>
-
-    <header>
-        <a href="https://dekub100.github.io">
-            <img src="logo.webp" alt="Logo" width="300" height="75">
-        </a>
-        <div class="mobile-nav-button" onclick="toggleMobileNav()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </header>
-
-    <div class="mobile-nav">
-        <div class="in-mobile-nav-button" onclick="toggleMobileNav()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <br><br><br><br>
-        <ul>
-            <br><br>
-            <li><div class="bigger-text">Under Construction</div></li>
-            <img src="construction.webp">
-        </ul>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.webp" />
+  </head>
+  <body>
+    <div id="loading-screen">
+      <span id="ps2-intro-text">dekub</span>
     </div>
-
-    <div class="container">
-
-        <section id="about" class="section-box">
-            <div class="bigger-text">O Mnie</div>
-            <div class="smaller-text">
-                    Wiek: 16<br>
-                    Imię: Jakub
-            </div>
-        </section>
-
-        <section id="social-media" class="section-box">
-            <div class="bigger-text">Social Media</div>
-            <div class="smaller-text">
-                        <a href="https://www.youtube.com/@dekub100" target="_blank" class="social-media-link youtube">Youtube</a>
-                        <a href="https://www.twitch.tv/dekubstreamingservice" target="_blank" class="social-media-link twitch">Twitch</a>
-                        <a href="https://www.tiktok.com/@dekub100" target="_blank" class="social-media-link tiktok">TikTok</a>
-                        <a class="social-media-link discord" data-clipboard-text="dekub100">dekub100</a><div id="mobileOnlyText">(Click to copy)<br><br></div>
-                        <div class="copy-notification" style="display: none;">Discord username copied!</div>
-                        <div class="tooltip" style="display: none;">Click to copy Discord username</div>
-                        <span id="media-other">jeżeli nie zalinkowane tutaj: @dekub100 na wszystkim</span>
-            </div>
-        </section>
-
-        <section id="specs" class="section-box">
-            <div class="bigger-text">Specyfikacja Komputera</div>
-            <div class="smaller-text">
-                <p>
-                    <span class="highlight">Procesor</span> - Ryzen 5 5600<br>
-                    <span class="highlight">Karta Graficzna</span> - Asus Dual GTX 1070 OC<br>
-                    <span class="highlight">RAM</span> - G.Skill Aegis 32GB 2x16GB 3000MHz<br>
-                    <span class="highlight">Monitor</span> - Koorui 24E6C 165Hz<br>
-                    <span class="highlight">Myszka</span> - Logitech G Pro Wireless<br>
-                    <span class="highlight">Klawiatura</span> - Drunkdeer G75<br>
-                    <span class="highlight">Słuchawki</span> - KZ ZSN Pro 2 (z Peace EQ)<br>
-                    <span class="highlight">Mikrofon</span> - Fifine K670<br>
-                    <span class="highlight">Kamerka</span> - Aukey LM1E
-                </p>
-        </section>
-
-        <section id="siege" class="section-box">
-            <div class="bigger-text">Ustaiwenia R6S</div>
-            <div class="smaller-text">
-                <p>
-                    <span class="highlight">Resolution</span> - 1920x1080<br>
-                    <span class="highlight">Aspect Ratio</span> - 3:2<br>
-                    <span class="highlight">FOV</span> - 87<br>
-                    <span class="highlight">Mouse Sensitivity</span> - 1200DPI<br>
-                    <span class="highlight">In Game Vertical</span> - 35<br>
-                    <span class="highlight">In Game Horizontal</span> - 43<br>
-                    <span class="highlight">Sensitivity Multiplier</span> - 0.002230<br>
-                    <span class="highlight">1x Scope Sensitivity</span> - 21<br>
-                    <span class="highlight">2.5x (ACOG) Scope Sensitivity</span> - 36
-                </p>
-            </div>
-        </section>
-
-        <div id="section-twitch">
-                <iframe src="https://player.twitch.tv/?channel=dekubstreamingservice&parent=dekub.eu" frameborder="0" allowfullscreen="true" scrolling="no" width="100%" height="600"></iframe>
+    <div id="ps2-bg"></div>
+    <div class="ps2-menu">
+      <div class="ps2-logo">dekub</div>
+      <ul>
+        <li class="ps2-item" id="r6-settings-btn">
+          <a href="#" id="r6-settings-link">
+            <img src="icons/rainbowsix.svg" /> R6 Settings</a
+          >
+        </li>
+        <li class="ps2-item" id="pc-btn">
+          <a href="#" id="pc-link">
+            <span class="pc-glow"><img src="icons/pc.svg" /></span> PC</a
+          >
+        </li>
+        <li class="ps2-item" id="social-media-btn">
+          <a href="/media/">
+            <img src="/media/icons/youtube.svg" /> Social Media</a
+          >
+        </li>
+      </ul>
+      <div id="settings-text" class="hidden">
+        <a href="#" id="back-btn" class="back-btn">&larr; Back</a>
+        <div class="settings-description" id="settings-description-r6">
+          <span class="highlight">Resolution</span> - 1920x1080<br />
+          <span class="highlight">Aspect Ratio</span> - 3:2<br />
+          <span class="highlight">FOV</span> - 87<br />
+          <span class="highlight">Mouse Sensitivity</span> - 1200DPI<br />
+          <span class="highlight">In Game Vertical</span> - 33<br />
+          <span class="highlight">In Game Horizontal</span> - 33<br />
+          <span class="highlight">Sensitivity Multiplier</span> - 0.002230<br />
+          <span class="highlight">1x Scope Sensitivity</span> - 28<br />
+          <span class="highlight">2.5x (ACOG) Scope Sensitivity</span> - 47
         </div>
-
-
+        <div class="settings-description hidden" id="settings-description-pc">
+          <span class="highlight">Processor</span> - Ryzen 5 5600<br />
+          <span class="highlight">Graphics Card</span> - Asus Dual GTX 1070
+          OC<br />
+          <span class="highlight">RAM</span> - G.Skill Aegis 32GB (2x16GB)
+          3000MHz<br />
+          <span class="highlight">Monitor</span> - Koorui 24E6C 165Hz<br />
+          <span class="highlight">Mouse</span> - Logitech G Pro Wireless<br />
+          <span class="highlight">Keyboard</span> - Drunkdeer G75<br />
+          <span class="highlight">Headphones</span> - Simgot EW200 (with Peace
+          EQ)<br />
+          <span class="highlight">Microphone</span> - Fifine K670<br />
+          <span class="highlight">Webcam</span> - Aukey LM1E
+        </div>
+      </div>
     </div>
-</body>
+    <div id="ps2-content"></div>
+    <div id="ps2-dots">
+      <video
+        id="dots-video"
+        src="assets/dots.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        oncontextmenu="return false;"
+      ></video>
+    </div>
+    <script src="/script.js"></script>
+  </body>
 </html>

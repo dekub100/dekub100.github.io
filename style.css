@@ -123,24 +123,10 @@ body {
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
 }
-
-/* Platform-specific link colors */
-.ps2-item a[href*="youtube.com"] {
-  color: #ff0000;
-  text-shadow: 0 0 4px #ff0000;
-}
-.ps2-item a[href*="twitch.tv"] {
-  color: #9147ff;
-  text-shadow: 0 0 4px #9147ff;
-}
-.ps2-item a[href*="github.com"] {
-  color: #727272;
-  text-shadow: 0 0 4px #727272;
-}
-.ps2-item a[href*="discordapp.com"],
-.ps2-item a[href*="discord.com"] {
-  color: #5865f2;
-  text-shadow: 0 0 4px #5865f2;
+.pc-glow {
+  display: inline-block;
+  background: transparent;
+  filter: drop-shadow(0 0 12px white);
 }
 
 .ps2-item a:hover {

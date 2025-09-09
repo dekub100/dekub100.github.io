@@ -74,13 +74,14 @@ body {
   width: 100%;
 }
 .ps2-item {
+  color: #fff;
   margin: 18px 0;
   font-size: 1.3rem;
   text-align: left;
   transition: background 0.2s;
 }
 .ps2-item a {
-  color: #b0c8ff;
+  color: #fff;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -108,6 +109,11 @@ body {
 .ps2-item a[href*="discord.com"] {
   color: #5865f2;
   text-shadow: 0 0 4px #5865f2;
+}
+.github-glow {
+  display: inline-block;
+  background: transparent;
+  filter: drop-shadow(0 0 12px white);
 }
 
 .ps2-item a:hover {
@@ -150,6 +156,7 @@ body {
     min-height: 180px;
     max-width: 75vw;
     max-height: 100vh;
+    margin-top: 40px;
   }
   #ps2-dots {
     margin-left: 0;

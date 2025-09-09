@@ -1,0 +1,269 @@
+.back-btn {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+.back-btn:hover {
+  color: #4b84ff;
+}
+.highlight {
+  color: #ffcc3f;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+.settings-description {
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 20px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+  background: #000000;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 1s;
+}
+#ps2-intro-text {
+  font-size: 10vw;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 2px #fff;
+  opacity: 0;
+  animation: ps2IntroFade 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes ps2IntroFade {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #2196f3, 0 0 10px #2196f3, 0 0 2px #fff;
+    filter: blur(20px);
+  }
+  40% {
+    opacity: 1;
+    text-shadow: 0 0 2px #fff;
+    filter: none;
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 2px #fff;
+    filter: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ps2-menu {
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  transform: translate(-40%, -50%);
+  z-index: 2;
+  padding: 40px 56px 32px 56px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ps2-logo {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #c4c400;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 16px #222a4a;
+}
+.ps2-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.ps2-item {
+  color: #fff;
+  margin: 18px 0;
+  font-size: 1.3rem;
+  text-align: left;
+  opacity: 1;
+  transition: background 0.2s, opacity 0.5s;
+}
+/* Fade out effect for menu buttons */
+.ps2-item.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+.ps2-item a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Platform-specific link colors */
+.ps2-item a[href*="youtube.com"] {
+  color: #ff0000;
+  text-shadow: 0 0 4px #ff0000;
+}
+.ps2-item a[href*="twitch.tv"] {
+  color: #9147ff;
+  text-shadow: 0 0 4px #9147ff;
+}
+.ps2-item a[href*="github.com"] {
+  color: #727272;
+  text-shadow: 0 0 4px #727272;
+}
+.ps2-item a[href*="discordapp.com"],
+.ps2-item a[href*="discord.com"] {
+  color: #5865f2;
+  text-shadow: 0 0 4px #5865f2;
+}
+
+.ps2-item a:hover {
+  background: #222a4a;
+  color: #fff;
+}
+.ps2-item img {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 2px 8px #222a4a);
+}
+#ps2-dots {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin-left: 24vw;
+}
+
+#dots-video {
+  width: 50vh;
+  height: 50vh;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  #dots-video {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 32vw;
+    width: 68vw;
+    height: 100vh;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 68vw;
+    max-height: 100vh;
+    margin-top: 40px;
+  }
+  #ps2-dots {
+    margin-left: 0;
+    justify-content: center;
+    height: 40vh;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    height: auto;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .ps2-menu {
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    padding: 24px 0 24px 0;
+    align-items: center;
+  }
+  .ps2-logo {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+  }
+  .ps2-menu ul {
+    width: 90vw;
+    padding: 0;
+  }
+  .ps2-item {
+    font-size: 1rem;
+    margin: 12px 0;
+  }
+  .ps2-item img {
+    width: 28px;
+    height: 28px;
+  }
+  .ps2-item a {
+    width: fit-content;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  /* Move dots to bottom when .dots-bottom-mobile is active */
+  #ps2-dots.dots-bottom-mobile {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    height: auto;
+    pointer-events: none;
+    flex-direction: row;
+  }
+  #ps2-dots.dots-bottom-mobile #dots-video {
+    width: 50vh;
+    height: 50vh;
+    transform: translateY(25%);
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 68vw;
+    max-height: 100vh;
+    margin: 0 0 18px 0;
+    position: static;
+    left: unset;
+    top: unset;
+    display: block;
+  }
+}

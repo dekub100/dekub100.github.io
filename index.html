@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dekub</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.webp" />
+  </head>
+  <body>
+    <div id="loading-screen">
+      <span id="ps2-intro-text">dekub</span>
+    </div>
+    <div id="ps2-bg"></div>
+    <div class="ps2-menu">
+      <div class="ps2-logo">dekub</div>
+      <ul>
+        <li class="ps2-item" id="r6-settings-btn">
+          <a href="#" id="r6-settings-link">
+            <img src="icons/rainbowsix.svg" /> R6 Settings</a
+          >
+        </li>
+        <li class="ps2-item" id="pc-btn">
+          <a href="#" id="pc-link"> <img src="icons/pc.svg" /> PC</a>
+        </li>
+        <li class="ps2-item" id="social-media-btn">
+          <a href="/media/">
+            <img src="/media/icons/youtube.svg" /> Social Media</a
+          >
+        </li>
+      </ul>
+      <div id="settings-text" class="hidden">
+        <a href="#" id="back-btn" class="back-btn">&larr; Back</a>
+        <div class="settings-description" id="settings-description-r6">
+          <span class="highlight">Resolution</span> - 1920x1080<br />
+          <span class="highlight">Aspect Ratio</span> - 3:2<br />
+          <span class="highlight">FOV</span> - 87<br />
+          <span class="highlight">Mouse Sensitivity</span> - 1200DPI<br />
+          <span class="highlight">In Game Vertical</span> - 35<br />
+          <span class="highlight">In Game Horizontal</span> - 43<br />
+          <span class="highlight">Sensitivity Multiplier</span> - 0.002230<br />
+          <span class="highlight">1x Scope Sensitivity</span> - 21<br />
+          <span class="highlight">2.5x (ACOG) Scope Sensitivity</span> - 36
+        </div>
+        <div class="settings-description hidden" id="settings-description-pc">
+          <span class="highlight">Processor</span> - Ryzen 5 5600<br />
+          <span class="highlight">Graphics Card</span> - Asus Dual GTX 1070
+          OC<br />
+          <span class="highlight">RAM</span> - G.Skill Aegis 32GB (2x16GB)
+          3000MHz<br />
+          <span class="highlight">Monitor</span> - Koorui 24E6C 165Hz<br />
+          <span class="highlight">Mouse</span> - Logitech G Pro Wireless<br />
+          <span class="highlight">Keyboard</span> - Drunkdeer G75<br />
+          <span class="highlight">Headphones</span> - Simgot EW200 (with Peace
+          EQ)<br />
+          <span class="highlight">Microphone</span> - Fifine K670<br />
+          <span class="highlight">Webcam</span> - Aukey LM1E
+        </div>
+      </div>
+    </div>
+    <div id="ps2-content"></div>
+    <div id="ps2-dots">
+      <video
+        id="dots-video"
+        src="assets/dots.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        oncontextmenu="return false;"
+      ></video>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

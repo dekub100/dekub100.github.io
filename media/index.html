@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>dekub</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/x-icon" href="/icons/favicon.webp" />
-      </head>
-      <body>
-        <div id="loading-screen">
-          <span id="ps2-intro-text">dekub</span>
-        </div>
-        <div id="ps2-bg"></div>
-        <div class="ps2-menu">
-          <div class="ps2-logo">dekub</div>
-          <ul>
-            <li class="ps2-item">
-              <a href="https://www.youtube.com/@dekub100" target="_blank"
-                ><img src="icons/youtube.svg" alt="YouTube" /> YouTube</a
-              >
-            </li>
-            <li class="ps2-item">
-              <a
-                href="https://www.twitch.tv/dekubstreamingservice"
-                target="_blank"
-                ><img src="icons/twitch.svg" alt="Twitch" /> Twitch</a
-              >
-            </li>
-            <li class="ps2-item">
-              <a href="https://github.com/dekub100" target="_blank"
-                ><img src="icons/github.svg" alt="GitHub" /> GitHub</a
-              >
-            </li>
-            <li class="ps2-item">
-              <a
-                href="https://discordapp.com/users/430380605683924993"
-                target="_blank"
-                ><img src="icons/discord.svg" alt="Discord" /> Discord</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div id="ps2-dots">
-          <video
-            id="dots-video"
-            src="assets/dots.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-            oncontextmenu="return false;"
-          ></video>
-        </div>
-        <script src="script.js"></script>
-      </body>
-    </html>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dekub</title>
+    <link rel="stylesheet" href="/media/media-style.css" />
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.webp" />
   </head>
+  <body>
+    <div id="loading-screen">
+      <span id="ps2-intro-text">dekub</span>
+    </div>
+    <div id="ps2-bg"></div>
+    <div class="ps2-menu">
+      <div class="ps2-logo">dekub</div>
+      <ul>
+        <li class="ps2-item">
+          <a href="https://www.youtube.com/@dekub100" target="_blank"
+            ><img src="icons/youtube.svg" /> YouTube</a
+          >
+        </li>
+        <li class="ps2-item">
+          <a href="https://www.twitch.tv/dekubstreamingservice" target="_blank"
+            ><img src="icons/twitch.svg" /> Twitch</a
+          >
+        </li>
+        <li class="ps2-item">
+          <a href="https://github.com/dekub100" target="_blank"
+            ><span class="github-glow"><img src="icons/github.svg" /> </span
+            >GitHub</a
+          >
+        </li>
+        <li class="ps2-item">
+          <a
+            href="https://discordapp.com/users/430380605683924993"
+            target="_blank"
+            ><img src="icons/discord.svg" /> Discord</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div id="ps2-dots">
+      <video
+        id="dots-video"
+        src="/assets/dots.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        oncontextmenu="return false;"
+      ></video>
+    </div>
+    <script src="/media/media-script.js"></script>
+  </body>
 </html>
